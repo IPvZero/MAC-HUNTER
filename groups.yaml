@@ -1,0 +1,9 @@
+---
+
+cisco_group:
+  username: john
+  password: cisco
+  platform: 'cisco_xe'
+  connection_options:
+    netmiko:
+      extras:  {}
