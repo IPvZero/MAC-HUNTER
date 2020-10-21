@@ -2,6 +2,10 @@
 AUTHOR: IPvZero
 DATE: 21 Oct 2020
 
+This script is intended to work on Cisco IOS and IOS-XE devices.
+Due to an issue with the Genie parsers ensure your Nornir inventory
+platform is set to 'cisco_xe' - even if the device is regular IOS.
+
 """
 
 import os
@@ -20,7 +24,7 @@ target = input("Enter the mac address you wish to find: ")
 def pull_info(task):
 
     """
-    1) If MAC address is present, identify Device and Interface
+    If MAC address is present, identify Device and Interface
     """
 
     result = task.run(
